@@ -50,9 +50,11 @@ class Dog
     SQL
     
     dog_info = DB[:conn].execute(sql, id)[0]
-    #if !dog_info.nil? && dog_info.length > 0
-      self.new_from_db(dog_info)
-    #end
+    self.new_from_db(dog_info)
+  end
+  
+  def self.find_or_create_by
+    
   end
   
 end
