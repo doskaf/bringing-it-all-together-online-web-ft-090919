@@ -49,10 +49,7 @@ class Dog
       WHERE id = ?
     SQL
     
-    info = DB[:conn].execute(sql, id)[0]
-        if !info.nil? && info.length > 0
-            self.new_from_db(info)
-        end
+    DB[:conn].execute(sql, id)[0]
   end
   
 end
